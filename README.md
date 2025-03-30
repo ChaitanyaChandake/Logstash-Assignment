@@ -59,7 +59,18 @@ Running Logstash
 
 **Output JSON log**
 
-{"computername":"acmeincpc42","process_id":"2496","hostname":"acmeinchost1","description":"Virus Found","version":"1","application":"antivirus","timestamp":"2016-12-25T09:03:52.754646-06:00","source_ip":"10.58.194.149","priority":"14","severity":"critical"}
+{
+"computername":"acmeincpc42",
+"process_id":"2496",
+"hostname":"acmeinchost1",
+"description":"Virus Found",
+"version":"1",
+"application":"antivirus",
+"timestamp":"2016-12-25T09:03:52.754646-06:00",
+"source_ip":"10.58.194.149",
+"priority":"14",
+"severity":"critical"
+}
 
 **File Details in the Project:**
 
