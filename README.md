@@ -58,7 +58,7 @@ Running Logstash
 >bin\logstash.bat -f config\logstash-sample.conf
 
 **Output JSON log**
-
+```json
 {
 "computername":"acmeincpc42",
 "process_id":"2496",
@@ -71,7 +71,7 @@ Running Logstash
 "priority":"14",
 "severity":"critical"
 }
-
+```
 **File Details in the Project:**
 
 **Path: Filebeat\filebeat_test.yml**
