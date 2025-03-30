@@ -88,15 +88,15 @@ This file contains a sample log with a single syslog entry, as provided in the a
 
 **Path: Test_data\Input_Logs\Added_logs_test**
 
-This file contains test logs with special cases, such as logs with msgid, structured data, missing fields, or extra key-value pairs. This allows testing of the pipeline's ability to handle edge cases.
+This file contains test logs with special cases as mentioned above. This allows testing of the pipeline's ability to handle edge cases.
 
 **Path: Test_data\Output_Logs\output_file**
 
-This file contains the output generated after Basic_logs_test is processed. It includes the structured JSON log with all relevant fields parsed and transformed.
+This file contains the output generated after Basic_logs_test input file is processed. It includes the structured JSON log with all relevant fields parsed and transformed.
 
 **Path: Test_data\Output_Logs\output_file_logs**
 
-This file contains the output generated after Added_logs_test is processed.
+This file contains the output generated after Added_logs_test input file is processed.
 
 **Output_console.png**
 
