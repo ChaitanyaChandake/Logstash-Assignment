@@ -67,21 +67,28 @@ Running Logstash
 This file contains configuration for filebeat.
 
 **Path: Logstash_config\loogstash-sample.conf**
+
 This file contains configuration file for logstash.
 
 **Path: Test_data\Input_Logs\Basic_logs_test**
+
 This file contains a sample log with a single syslog entry, as provided in the assignment. This is the basic log file that is used to test the initial pipeline configuration.
 
 **Path: Test_data\Input_Logs\Added_logs_test**
+
 This file contains test logs with special cases, such as logs with msgid, structured data, missing fields, or extra key-value pairs. This allows testing of the pipeline's ability to handle edge cases.
 
 **Path: Test_data\Output_Logs\output_file**
+
 This file contains the output generated after Basic_logs_test is processed. It includes the structured JSON log with all relevant fields parsed and transformed.
 
 **Path: Test_data\Output_Logs\output_file_logs**
+
 This file contains the output generated after Added_logs_test is processed.
 
 **Output_console.png**
+
 Screenshot of Logstash console output(Here I have used stdout in output plugin to generate output on console)
 
-**commandline_output.txt** -> Execution output of Logstash during log processing.
+**commandline_output.txt** 
+Execution output of Logstash during log processing.
