@@ -82,17 +82,9 @@ This file contains configuration for filebeat.
 
 This file contains configuration file for logstash.
 
-**Path: Test_data\Input_Logs\Basic_logs_test**
-
-This file contains a sample log with a single syslog entry, as provided in the assignment. This is the basic log file that is used to test the initial pipeline configuration.
-
 **Path: Test_data\Input_Logs\Added_logs_test**
 
-This file contains test logs with special cases as mentioned above. This allows testing of the pipeline's ability to handle edge cases.
-
-**Path: Test_data\Output_Logs\output_file**
-
-This file contains the output generated after Basic_logs_test input file is processed. It includes the structured JSON log with all relevant fields parsed and transformed.
+This file contains input test logs.
 
 **Path: Test_data\Output_Logs\output_file_logs**
 
