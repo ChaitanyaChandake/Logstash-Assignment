@@ -64,6 +64,7 @@ Running Logstash
 **File Details in the Project:**
 
 **Path: Filebeat\filebeat_test.yml**
+
 This file contains configuration for filebeat.
 
 **Path: Logstash_config\logstash-sample.conf**
@@ -91,4 +92,5 @@ This file contains the output generated after Added_logs_test is processed.
 Screenshot of Logstash console output(Here I have used stdout in output plugin to generate output on console)
 
 **commandline_output.txt** 
+
 Execution output of Logstash during log processing.
