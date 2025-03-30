@@ -1,0 +1,8 @@
+<14>1 2016-12-27T09:03:52.754646-07:00 acmeinchost1 antivirus 2496 - - alertname="Virus Found" computername="acmeincpc51" computerip="10.58.194.152" severity="1"
+<14>1 2016-12-25T09:03:52.754646-02:00 acmeinchost2 antivirus 2498 - - alertname="Ransomware Attack" computername="acmeincpc52" computerip="10.58.196.153" severity="2"
+<14>1 2016-12-25T09:03:52.754646-07:00 acmeinchost3 antivirus 2499 - - alertname="Phishing Attempt" computername="acmeincpc53" computerip="10.58.199.154" severity="3"
+<14>1 2016-12-25T09:03:52.754646-07:00 acmeinchost4 antivirus 2009 - - alertname="Spyware Found" computername="acmeincpc54" computerip="10.58.199.155" severity="3" msgid="98765" event_id="6789" location="Canada" user="admin"
+<14>1 2023-05-10T14:25:35.123456-04:00 avserver2 antivirus 1290 msgid="54321" - alertname="Adware Detected" computername="avpc05" computerip="192.168.1.105" severity="1"
+<14>1 2023-05-10T14:30:12.987654-04:00 avserver3 antivirus 1320 msgid="56789" [exampleSDID@32474 iut="7" eventSource="Database"] alertname="Suspicious File" computername="avpc06" computerip="192.168.1.106" severity="3"
+<14>1 2023-05-10T14:40:45.543210-04:00 avserver4 antivirus 1350 - [exampleSDID@32475 iut="8" eventSource="Application"] alertname="System Compromise" computername="avpc07" computerip="192.168.1.107" severity="2"
+<14>1 2016-12-25T09:03:52.754646-07:00 acmeinchost5 antivirus 2488 - - Test message for analysis purposes

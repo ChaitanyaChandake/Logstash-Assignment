@@ -1,0 +1,124 @@
+Microsoft Windows [Version 10.0.22621.4317]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin\Desktop\Logstash\logstash\logstash-8.17.4>bin\logstash.bat -f config\logstash-sample.conf
+"Using bundled JDK: C:\Users\Admin\Desktop\Logstash\logstash\logstash-8.17.4\jdk\bin\java.exe"
+Sending Logstash logs to C:/Users/Admin/Desktop/Logstash/logstash/logstash-8.17.4/logs which is now configured via log4j2.properties
+[2025-03-30T16:12:20,212][WARN ][logstash.runner          ] NOTICE: Running Logstash as a superuser is strongly discouraged as it poses a security risk. Set 'allow_superuser' to false for better security.
+[2025-03-30T16:12:20,212][INFO ][logstash.runner          ] Log4j configuration path used is: C:\Users\Admin\Desktop\Logstash\logstash\logstash-8.17.4\config\log4j2.properties
+[2025-03-30T16:12:20,212][WARN ][logstash.runner          ] The use of JAVA_HOME has been deprecated. Logstash 8.0 and later ignores JAVA_HOME and uses the bundled JDK. Running Logstash with the bundled JDK is recommended. The bundled JDK has been verified to work with each specific version of Logstash, and generally provides best performance and reliability. If you have compelling reasons for using your own JDK (organizational-specific compliance requirements, for example), you can configure LS_JAVA_HOME to use that version instead.
+[2025-03-30T16:12:20,212][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"8.17.4", "jruby.version"=>"jruby 9.4.9.0 (3.1.4) 2024-11-04 547c6b150e OpenJDK 64-Bit Server VM 21.0.6+7-LTS on 21.0.6+7-LTS +indy +jit [x86_64-mswin32]"}
+[2025-03-30T16:12:20,212][INFO ][logstash.runner          ] JVM bootstrap flags: [-Xms1g, -Xmx1g, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djruby.compile.invokedynamic=true, -XX:+HeapDumpOnOutOfMemoryError, -Djava.security.egd=file:/dev/urandom, -Dlog4j2.isThreadContextMapInheritable=true, -Dlogstash.jackson.stream-read-constraints.max-string-length=200000000, -Dlogstash.jackson.stream-read-constraints.max-number-length=10000, -Djruby.regexp.interruptible=true, -Djdk.io.File.enableADS=true, --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED, --add-opens=java.base/java.security=ALL-UNNAMED, --add-opens=java.base/java.io=ALL-UNNAMED, --add-opens=java.base/java.nio.channels=ALL-UNNAMED, --add-opens=java.base/sun.nio.ch=ALL-UNNAMED, --add-opens=java.management/sun.management=ALL-UNNAMED, -Dio.netty.allocator.maxOrder=11]
+[2025-03-30T16:12:20,243][INFO ][org.logstash.jackson.StreamReadConstraintsUtil] Jackson default value override `logstash.jackson.stream-read-constraints.max-string-length` configured to `200000000`
+[2025-03-30T16:12:20,243][INFO ][org.logstash.jackson.StreamReadConstraintsUtil] Jackson default value override `logstash.jackson.stream-read-constraints.max-number-length` configured to `10000`
+[2025-03-30T16:12:20,274][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2025-03-30T16:12:21,380][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600, :ssl_enabled=>false}
+[2025-03-30T16:12:21,978][INFO ][org.reflections.Reflections] Reflections took 82 ms to scan 1 urls, producing 152 keys and 530 values
+[2025-03-30T16:12:23,897][WARN ][logstash.filters.translate] You are using a deprecated config setting "destination" set in translate. Deprecated settings will continue to work, but are scheduled for removal from logstash in the future. Use `target` option instead. If you have any questions about this, please visit the #logstash channel on freenode irc. {:name=>"destination", :plugin=><LogStash::Filters::Translate destination=>"severity", dictionary=>{"1"=>"critical", "2"=>"high", "3"=>"medium", "4"=>"low", "5"=>"info"}, id=>"917b2d85fcd86dedd45ed4d0497cbdedf7352f1287f4328a80ffc826076acaac", field=>"dynamic_severity", fallback=>"unknown", enable_metric=>true, periodic_flush=>false, refresh_interval=>300, exact=>true, regex=>false, refresh_behaviour=>"merge">}
+[2025-03-30T16:12:23,897][WARN ][logstash.filters.translate] You are using a deprecated config setting "field" set in translate. Deprecated settings will continueto work, but are scheduled for removal from logstash in the future. Use `source` option instead. If you have any questions about this, please visit the #logstash channel on freenode irc. {:name=>"field", :plugin=><LogStash::Filters::Translate destination=>"severity", dictionary=>{"1"=>"critical", "2"=>"high", "3"=>"medium","4"=>"low", "5"=>"info"}, id=>"917b2d85fcd86dedd45ed4d0497cbdedf7352f1287f4328a80ffc826076acaac", field=>"dynamic_severity", fallback=>"unknown", enable_metric=>true, periodic_flush=>false, refresh_interval=>300, exact=>true, regex=>false, refresh_behaviour=>"merge">}
+[2025-03-30T16:12:24,062][INFO ][logstash.javapipeline    ] Pipeline `main` is configured with `pipeline.ecs_compatibility: v8` setting. All plugins in this pipeline will default to `ecs_compatibility => v8` unless explicitly configured otherwise.
+[2025-03-30T16:12:24,080][INFO ][logstash.filters.kv      ][main] ECS compatibility is enabled but `target` option was not specified. This may cause fields to be set at the top-level of the event where they are likely to clash with the Elastic Common Schema. It is recommended to set the `target` option to avoid potential schema conflicts (if your data is ECS compliant or non-conflicting, feel free to ignore this message)
+[2025-03-30T16:12:24,081][WARN ][logstash.filters.grok    ][main] ECS v8 support is a preview of the unreleased ECS v8, and uses the v1 patterns. When Version 8 of the Elastic Common Schema becomes available, this plugin will need to be updated
+[2025-03-30T16:12:24,196][WARN ][logstash.filters.grok    ][main] ECS v8 support is a preview of the unreleased ECS v8, and uses the v1 patterns. When Version 8 of the Elastic Common Schema becomes available, this plugin will need to be updated
+[2025-03-30T16:12:24,231][INFO ][logstash.javapipeline    ][main] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>12, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50, "pipeline.max_inflight"=>1500, "pipeline.sources"=>["C:/Users/Admin/Desktop/Logstash/logstash/logstash-8.17.4/config/logstash-sample.conf"], :thread=>"#<Thread:0x11761f16 C:/Users/Admin/Desktop/Logstash/logstash/logstash-8.17.4/logstash-core/lib/logstash/java_pipeline.rb:138 run>"}
+[2025-03-30T16:12:25,064][INFO ][logstash.javapipeline    ][main] Pipeline Java execution initialization time {"seconds"=>0.83}
+[2025-03-30T16:12:25,069][INFO ][logstash.inputs.beats    ][main] Starting input listener {:address=>"0.0.0.0:5044"}
+[2025-03-30T16:12:25,085][INFO ][logstash.javapipeline    ][main] Pipeline started {"pipeline.id"=>"main"}
+[2025-03-30T16:12:25,092][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[2025-03-30T16:12:25,225][INFO ][org.logstash.beats.Server][main][6c861e2cae5bba910a5a1f19f78c3c38b10d6fff1e395e002ad36cad7df54996] Starting server on port: 5044
+{
+     "process_id" => "2488",
+      "timestamp" => "2016-12-25T09:03:52.754646-07:00",
+       "hostname" => "acmeinchost5",
+    "application" => "antivirus",
+        "version" => "1",
+       "priority" => "14"
+}
+{
+      "process_id" => "1320",
+     "application" => "antivirus",
+         "version" => "1",
+    "computername" => "avpc06",
+        "priority" => "14",
+       "timestamp" => "2023-05-10T14:30:12.987654-04:00",
+        "hostname" => "avserver3",
+       "source_ip" => "192.168.1.106",
+        "severity" => "medium",
+     "description" => "Suspicious File"
+}
+{
+      "process_id" => "2496",
+     "application" => "antivirus",
+         "version" => "1",
+    "computername" => "acmeincpc51",
+        "priority" => "14",
+       "timestamp" => "2016-12-27T09:03:52.754646-07:00",
+        "hostname" => "acmeinchost1",
+       "source_ip" => "10.58.194.152",
+        "severity" => "critical",
+     "description" => "Virus Found"
+}
+{
+      "process_id" => "2498",
+     "application" => "antivirus",
+         "version" => "1",
+    "computername" => "acmeincpc52",
+        "priority" => "14",
+       "timestamp" => "2016-12-25T09:03:52.754646-02:00",
+        "hostname" => "acmeinchost2",
+       "source_ip" => "10.58.196.153",
+        "severity" => "high",
+     "description" => "Ransomware Attack"
+}
+{
+      "process_id" => "1290",
+     "application" => "antivirus",
+         "version" => "1",
+    "computername" => "avpc05",
+        "priority" => "14",
+       "timestamp" => "2023-05-10T14:25:35.123456-04:00",
+        "hostname" => "avserver2",
+       "source_ip" => "192.168.1.105",
+        "severity" => "critical",
+     "description" => "Adware Detected"
+}
+{
+      "process_id" => "1350",
+     "application" => "antivirus",
+         "version" => "1",
+    "computername" => "avpc07",
+        "priority" => "14",
+       "timestamp" => "2023-05-10T14:40:45.543210-04:00",
+        "hostname" => "avserver4",
+       "source_ip" => "192.168.1.107",
+        "severity" => "high",
+     "description" => "System Compromise"
+}
+{
+          "process_id" => "2009",
+        "dynamic_user" => "admin",
+    "dynamic_location" => "Canada",
+         "application" => "antivirus",
+             "version" => "1",
+        "computername" => "acmeincpc54",
+            "priority" => "14",
+       "dynamic_msgid" => "98765",
+           "timestamp" => "2016-12-25T09:03:52.754646-07:00",
+            "hostname" => "acmeinchost4",
+    "dynamic_event_id" => "6789",
+           "source_ip" => "10.58.199.155",
+            "severity" => "medium",
+         "description" => "Spyware Found"
+}
+{
+      "process_id" => "2499",
+     "application" => "antivirus",
+         "version" => "1",
+    "computername" => "acmeincpc53",
+        "priority" => "14",
+       "timestamp" => "2016-12-25T09:03:52.754646-07:00",
+        "hostname" => "acmeinchost3",
+       "source_ip" => "10.58.199.154",
+        "severity" => "medium",
+     "description" => "Phishing Attempt"
+}
