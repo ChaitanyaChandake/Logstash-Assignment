@@ -66,7 +66,7 @@ Running Logstash
 **Path: Filebeat\filebeat_test.yml**
 This file contains configuration for filebeat.
 
-**Path: Logstash_config\loogstash-sample.conf**
+**Path: Logstash_config\logstash-sample.conf**
 
 This file contains configuration file for logstash.
 
