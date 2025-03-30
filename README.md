@@ -72,7 +72,7 @@ Running Logstash
 "severity":"critical"
 }
 ```
-**File Details in the Project:**
+**File Details in the Project** (Refer to Main Directory Folder <mark>Logstash-Solution</mark>)
 
 **Path: Filebeat\filebeat_test.yml**
 
