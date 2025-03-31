@@ -21,11 +21,13 @@ Created custom configuration file in config folder of Logstash(config\logstash-s
 **Filter plugin**: After recieveing the logs from filebeat, I have used GROK filter plugin in Logstash to process the incoming logs and extract key meta fields. Steps involve:
 
 1. Using GROK filter to parse and extract structured data from input logs.
-2. Using KV(Key-Value) filter to process second part of the log which contains key-value pairs.The KV filter is configured to split the key value pairs based on 
+   Note: I have handled alertname separately with the GROK filter before applying the KV filter. This is done to ensure proper handling of multi-word or space-separated values that may appear in the alertname 
+   field.
+3. Using KV(Key-Value) filter to process second part of the log which contains key-value pairs.The KV filter is configured to split the key value pairs based on 
    defined field_split and value_split.This ensures that even if new key value pairs appear in future logs, they are captured dynamically with a prefix(dynamic_) 
    e.g.,dynamic_newkey => value
-3. Translated severity from numeric value to a label and captured the label in severity meta key using Translate filter.
-4. Mutate filter is used to add important fields that have different intial name before processing and captured them in desired meta names post processing 
+4. Translated severity from numeric value to a label and captured the label in severity meta key using Translate filter.
+5. Mutate filter is used to add important fields that have different intial name before processing and captured them in desired meta names post processing 
    (description,source_ip,computername). Mutate is also used to remove fields that are not needed in final output. These could be added back if needed.
    
 **Handled Special Cases**
@@ -59,18 +61,7 @@ Running Logstash
 
 **Output JSON log**
 ```json
-{
-"computername":"acmeincpc42",
-"process_id":"2496",
-"hostname":"acmeinchost1",
-"description":"Virus Found",
-"version":"1",
-"application":"antivirus",
-"timestamp":"2016-12-25T09:03:52.754646-06:00",
-"source_ip":"10.58.194.149",
-"priority":"14",
-"severity":"critical"
-}
+{"source_ip":"10.58.194.149","hostname":"acmeinchost1","severity":"critical","timestamp":"2016-12-25T09:03:52.754646-06:00","process_id":"2496","description":"Virus Found","application":"antivirus","computername":"acmeincpc42"}
 ```
 **File Details in the Project** (Refer to Main Directory Folder <mark>Logstash-Solution</mark>)
 
