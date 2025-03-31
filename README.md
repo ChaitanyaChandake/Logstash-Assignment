@@ -21,6 +21,7 @@ Created custom configuration file in config folder of Logstash(config\logstash-s
 **Filter plugin**: After recieveing the logs from filebeat, I have used GROK filter plugin in Logstash to process the incoming logs and extract key meta fields. Steps involve:
 
 1. Using GROK filter to parse and extract structured data from input logs.
+   
    Note: I have handled alertname separately with the GROK filter before applying the KV filter. This is done to ensure proper handling of multi-word or space-separated values that may appear in the alertname 
    field.
 3. Using KV(Key-Value) filter to process second part of the log which contains key-value pairs.The KV filter is configured to split the key value pairs based on 
