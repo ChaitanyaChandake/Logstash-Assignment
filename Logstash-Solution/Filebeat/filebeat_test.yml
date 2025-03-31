@@ -2,7 +2,7 @@ filebeat.inputs:
   - type: log
     enabled: true
     paths:
-      - C:\\Path\\Input\\input_file_test.log
+      - C:\\Path\\Input\\Added_logs_test.log
     start_position: beginning
 
 output.logstash:
