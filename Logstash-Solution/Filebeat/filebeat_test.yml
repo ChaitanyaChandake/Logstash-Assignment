@@ -4,6 +4,8 @@ filebeat.inputs:
     paths:
       - C:\\Path\\Input\\Added_logs_test.log
     start_position: beginning
+    scan_frequency: 10s
+    close_inactive: 1m
 
 output.logstash:
   # The Logstash hosts
